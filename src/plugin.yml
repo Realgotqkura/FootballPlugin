@@ -1,0 +1,11 @@
+main: com.realgotqkura.footballplugin.FootballPlugin
+author: Realgotqkura
+version: 1.0
+name: Football
+api-version: "1.13"
+
+commands:
+  spawnball:
+    description: "Spawns a ball in front of the player"
+  equipmovement:
+    description: "Equip the movements of a specific character"
