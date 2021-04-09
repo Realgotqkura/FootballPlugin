@@ -1,6 +1,7 @@
 package com.realgotqkura.utils;
 
 import com.realgotqkura.footballplugin.FootballPlugin;
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -21,7 +22,7 @@ public class Utilities {
         return x >= x1 && x <= x2 && y >= y1 && y <= y2 && z >= z1 && z <= z2;
     }
 
-    public static void AnimatedTitle(String s, FootballPlugin plugin, Player player, int index1){
+    public static void AnimatedTitle(String s, FootballPlugin plugin, Player player, int index1, String color){
         char[] chars = s.toCharArray();
         new BukkitRunnable(){
 
@@ -30,11 +31,11 @@ public class Utilities {
             @Override
             public void run() {
                 if(index == chars.length){
-                    player.sendTitle("",ColorOf.colorof("&a&k&lE &3" + s + " &a&k&lE"), 5,20,20);
+                    player.sendTitle("",ColorOf.colorof("&a&k&lE " + ChatColor.of(color) +  s + " &a&k&lE"), 5,20,20);
                     cancel();
                 }
                 if(index == 0){
-                    player.sendTitle("",ColorOf.colorof("&3" + chars[index] + ""), 5,20,20);
+                    player.sendTitle("", ChatColor.of(color) + "" + chars[index], 5,20,20);
                     index++;
                     return;
                 }
@@ -42,13 +43,15 @@ public class Utilities {
                 for(int i = 0; i <= index; i++){
                     message += chars[i];
                 }
-                player.sendTitle("",ColorOf.colorof("&3" + message + ""), 5,20,20);
+                player.sendTitle("",ChatColor.of(color) + message, 5,20,20);
                 message = "";
                 index++;
             }
 
         }.runTaskTimer(plugin, 3,2);
     }
+
+
 
     public static void UnfinishedAnimatedTitle(String s, FootballPlugin plugin, Player player){
         char[] chars = s.toCharArray();

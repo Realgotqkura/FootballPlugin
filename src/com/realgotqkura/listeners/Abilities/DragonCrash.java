@@ -64,7 +64,7 @@ public class DragonCrash implements Listener {
                                                     plugin.getConfig().getLocation("FootballPlugin.ball_location").getY(),
                                                     stand.getLocation().getZ());
                                             stand.teleport(loc);
-                                            Utilities.AnimatedTitle("Dragon Crash", plugin, player, 0);
+                                            Utilities.AnimatedTitle("Dragon Crash", plugin, player, 0, "#1b7696");
                                             cancel();
                                         }
                                     }
