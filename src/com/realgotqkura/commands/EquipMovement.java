@@ -33,8 +33,8 @@ public class EquipMovement implements CommandExecutor {
                 player.getInventory().setItem(8, Abilities.DragonCrashItem());
                 player.getInventory().setItem(7, Abilities.FireTornadoItem());
                 player.sendMessage(ColorOf.colorof("&aEquipped the Kevin movements."));
+                return true;
             }
-
 
         }
         return false;
