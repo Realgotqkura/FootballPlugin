@@ -16,10 +16,8 @@ public class Abilities {
         ItemMeta meta = stack.getItemMeta();
         meta.setDisplayName(ChatColor.of("#1ac7a7") + "Dragon Crash");
         List<String> lore = new ArrayList<>();
-        lore.add(ColorOf.colorof("&7Ability Owner: &bKevin"));
         lore.add("");
         lore.add(ColorOf.colorof("&7Ability: &3Makes a powerful shot"));
-        lore.add(ColorOf.colorof("&7Combos: &cFire Tornado"));
         meta.setLore(lore);
         stack.setItemMeta(meta);
         return stack;
@@ -30,10 +28,21 @@ public class Abilities {
         ItemMeta meta = stack.getItemMeta();
         meta.setDisplayName(ChatColor.of("#fc9d03") + "Fire Tornado");
         List<String> lore = new ArrayList<>();
-        lore.add(ColorOf.colorof("&7Ability Owner: &cAxel"));
         lore.add("");
         lore.add(ColorOf.colorof("&7Ability: &6Makes a powerful shot in the air"));
-        lore.add(ColorOf.colorof("&7Combos: &3Dragon Crash"));
+        meta.setLore(lore);
+        stack.setItemMeta(meta);
+        return stack;
+    }
+
+    public static ItemStack DeathZoneItem(){
+        ItemStack stack = new ItemStack(Material.FERMENTED_SPIDER_EYE);
+        ItemMeta meta = stack.getItemMeta();
+        meta.setDisplayName(ChatColor.of("#8803fc") + "Death Zone");
+        List<String> lore = new ArrayList<>();
+        lore.add("");
+        lore.add(ColorOf.colorof("&7Ability: &6Makes a powerful shot in the air"));
+        lore.add(ColorOf.colorof("&cRequires 3 people"));
         meta.setLore(lore);
         stack.setItemMeta(meta);
         return stack;

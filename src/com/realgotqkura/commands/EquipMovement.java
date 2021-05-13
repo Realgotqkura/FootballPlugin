@@ -27,12 +27,13 @@ public class EquipMovement implements CommandExecutor {
                 return true;
             }
 
-            if(args[0].equalsIgnoreCase("kevin")){
+            if(args[0].equalsIgnoreCase("abilities")){
                 player.getInventory().setItem(0, BasicMovement.WeakKick());
                 player.getInventory().setItem(1, BasicMovement.StrongKick());
                 player.getInventory().setItem(8, Abilities.DragonCrashItem());
                 player.getInventory().setItem(7, Abilities.FireTornadoItem());
-                player.sendMessage(ColorOf.colorof("&aEquipped the Kevin movements."));
+                player.getInventory().setItem(6, Abilities.DeathZoneItem());
+                player.sendMessage(ColorOf.colorof("&aEquipped the ability movements."));
                 return true;
             }
 

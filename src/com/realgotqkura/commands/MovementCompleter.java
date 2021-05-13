@@ -13,7 +13,7 @@ public class MovementCompleter implements TabCompleter {
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         if(strings.length == 1){
             List<String> e = new ArrayList<>();
-            e.add("Kevin");
+            e.add("abilities");
 
             return e;
         }
